@@ -4,6 +4,7 @@
 
 body {
     background-color:#FCF6FC;
+    font-family: 'Courier New', Courier, monospace;
     
 }
 
@@ -14,10 +15,14 @@ img {
     padding: 0;
 }
 header {
+    min-width: 80%;
     display: grid;
+    margin-left: 20px;
+    margin-right: 20px;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(11, 50px);
-
+    grid-template-rows: repeat(12, 50px);
+    background-color: #FFFFFF;
+    box-shadow:1px 1px 1px 1px rgba(1, 1, 1, 01.1);
 }
 
 
@@ -49,55 +54,98 @@ header {
 
 .header__menu {
     display: flex;
+    grid-column: 3 / 11;
+    grid-row: 11 / 12;
+    justify-content: space-between;
+    align-items: center;
     background-color: #FFFFFF;
     box-shadow:1px 1px 1px 1px rgba(0, 0, 0, 0.1);
-    margin: 0px;
-    padding: 20px;
-    grid-column: 3 / 11 ;
-    justify-content: space-between;
-    align-content:space-between ;
+    padding: 10px 0;
+
+    
 }
+
 
 .header__menu--text a {
     text-decoration: none;
-    font-family: 'Courier New', Courier, monospace;
-    color: black;
+    color: #0A846E;
+    padding: 10px 15px;
     
 }
 
 main {
     display: grid;
+    min-width: auto;
+    margin-left: 20px;
+    margin-right: 20px;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(11, 50px);
-
-
+    grid-template-rows: repeat(11, 1fr);
+    background-color: #FFFFFF;
+    box-shadow:1px 1px 1px 1px rgba(1, 1, 1, 01.1);
+    
 }
 
-.main--text {
+.main__title--text {
     display: grid;
   justify-self: center;
   align-self: center;
-  grid-column: 1 / -1;
+  grid-column: 3 / 11;
   color: #0A846E;
 }
 
+.main__paragraph--text {
+    grid-column: 8 / 11;
+    grid-row: 3 / 5;
+}
+
 .main__img--circle {
+    width: 300px;
+    height: 300px;
     background-color: #0A846E;
-    grid-row: 4 / 6;
-    border-radius: 100%;
-   
+    grid-row: 2 / 6;
+    grid-column: 3 / 7;
+    border-radius: 50%;   
 
 }
 
 
-.main__button {
-    
-    height: 50px;
+button {
     width: 100px;
-    padding: 1rem;
+    height: fit-content;
+    padding: 7px;
+    border-radius: 7px;
 }
 
-.button--style {
+.button--primary {
     background-color:#0A846E;
     color: white;
 }
+
+.button--secondary {
+    background-color: red;
+}
+
+.main__button {
+    grid-row: 5 / 6;
+    grid-column: 9 / 11;
+}
+
+article {
+    display: flex;
+    flex-wrap:wrap ;
+    justify-content: space-between;
+    margin: 0 20px;
+    background-color: white;
+}
+
+article section {
+    width: 30%;
+    text-align: center;
+    box-shadow:1px 1px 1px 1px rgba(1, 1, 1, 01.1);
+}
+
+.vegetable__img {
+    height: 10rem;
+    width: 10rem;
+}
+
