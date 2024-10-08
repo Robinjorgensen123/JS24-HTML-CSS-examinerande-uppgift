@@ -110,26 +110,29 @@ main {
     border-radius: 50%;   
 
 }
+    
 
+.button {
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
 
-.main__button {
+.button__large {
     min-width: 100px;
-    grid-row: 5 / 6;
-    grid-column: 10 / 11;
-    height: fit-content;
-    background-color: #0A846E;
-    padding: 7px;
-    border-radius: 7px;
+    height: 2rem;
 }
-.article__button {
-    grid-row: 4 / 4;
-    grid-column: 3 / 4;
-    width: 100px;
-    align-self: center;
-    padding: 2px;
-    border-radius: 7px;
 
+.button__small {
+   min-width: 100px;
+   height: 1rem;
 }
+
+.button--primary {
+    background-color: #0A846E;
+    color: white;
+}
+
 
 .button--secondary {
     background-color: red;
@@ -137,7 +140,15 @@ main {
     
 }
 
+.button__main {
+    grid-row: 5 / 6;
+    grid-column: 10 / 11;
+}
 
+.card__button {
+    grid-row: 4 / 4;
+    grid-column: 3 / 4;
+}
 
 article {
     background-color: #FFFFFF;
@@ -181,6 +192,7 @@ section {
     align-self: center;
     width: 100%;
     padding: 10px;
+    box-shadow:inset 0px 0px 0px 0px rgba(0, 1, 0, 0.1);
 }
 
 .section__box1 {
