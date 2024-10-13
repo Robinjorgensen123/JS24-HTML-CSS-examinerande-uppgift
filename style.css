@@ -29,7 +29,15 @@ header {
     
 }
 
+.img-more {
+    grid-row: 1;
+    grid-column: 12;
+    display: none;
+    height: 2rem;
+    width: 2rem;
+    position: absolute;
 
+}
 
 
 .header__img--heart1 {
@@ -83,6 +91,14 @@ header {
 
 main {
     background-color: white;
+}
+
+.trashcan {
+    height: 3rem;
+    width: 3rem;
+    background-color: none;
+    align-items: flex-end;
+    display: none;
 }
 
 .banner {
@@ -394,6 +410,15 @@ background-color: #FFFFFF;
 
 }
 
+.sida2-img-more {
+    grid-row: 1 / 2;
+    grid-column: 6 / 7 ;
+    height: 2rem;
+    width: 2rem;
+    display: none;
+    position: absolute;
+}
+
 .header__img--heart {
     grid-column: 3 / 5;
     grid-row: 2 / 3;
@@ -547,10 +572,18 @@ border: 2rem solid #9E6D52;
   /*------------Header----------*/
   header {
     max-width: 1000px;
+    position: relative;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(10, 4rem);
   }
+  .img-more {
+    position: absolute;
+    display: block;
+}
+
+
+
 
     .header__img--heart1 {
         grid-column: 5 / 9;
@@ -561,7 +594,7 @@ border: 2rem solid #9E6D52;
     
     .header__img--big {
         grid-column: 1 / 13;
-        grid-row: 2 / 7;
+        grid-row: 1 / 7;
         object-fit: fill;
     }
     
@@ -580,9 +613,7 @@ border: 2rem solid #9E6D52;
     }
     
     .header__menu {
-       
-        grid-column: 1 / 13;
-        grid-row: 1 / 2;
+       display: none;
        
     
         
@@ -606,17 +637,19 @@ border: 2rem solid #9E6D52;
         text-align: center;
         width: 4rem;
         margin: 20px;
-         
-        
       
       }
+
+
 
       .main__img--circle {
         height: 300px;
         width: 300px;
       }
 
-      
+   span button {
+    display: none;
+   } 
 
 
 
@@ -688,13 +721,13 @@ width: 100%;
 @media only screen and (max-width: 600px) 
 
     {
-        .header-sida2--hamburgermeny {
+        .sida2-img-more {
+            grid-row: 1 / 2;
+            grid-column: 6 / 7 ;
+            margin-left: 50px;
+            margin-top: 10px;
             display: block;
             position: absolute;
-            height: 2rem;
-            width: 2rem;
-            grid-row: 1 / 1;
-            
         }
 
         .header-sida2__form-container {
@@ -702,6 +735,15 @@ width: 100%;
           
         }
 
+        .trashcan {
+                height: 1.5rem;
+                width: 1.5rem;
+                background-color: none;
+                align-items: flex-end;
+                display: block;
+                
+        }
+        
 
         /*----------------footer-sida2----------*/
         .footer-sida2__button {
